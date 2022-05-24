@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-center"><b>COTG</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="text-center">New Event</h3>
+  <p class="text-center">Assign Cords</p>
+  <ion-item>
+    <ion-label>A.Card 1 :</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card1']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index" [value]="i">{{ item }}</ion-select-option>
+
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>A.Card 2 :</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card2']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index" [value]="i">{{ item }}</ion-select-option>
+     
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label> A.Card 3:</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card3']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index" [value]="i" >{{ item }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label> A.Card 4:</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card4']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index"  [value]="i">{{ item }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label> A.Card 5:</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card5']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index" [value]="i">{{ item }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label> A.Card 6:</ion-label>
+    <ion-select [(ngModel)]="eventData.cardAssignments['card6']"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let item of eventData.teams; let i = index" [value]="i">{{ item }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+ 
+  <div class="text-center ion-margin-top">
+    <ion-button class="text-white" (click)="gotoPage('/d0-planning-launch')" color="success">Next</ion-button>
+  </div>
+</ion-content>

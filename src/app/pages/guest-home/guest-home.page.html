@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="assets/icon/homescreen/logo.png" class="logotop">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container default-bg">
+    <div class="btns-group-wrapper">
+      <ion-button class="cotg-btn" (click)="handleJoinEventBtnClick()" color="cotg-primary">
+        Join Event
+      </ion-button>
+      <ion-button class="cotg-btn" (click)="handleCreateAccountBtnClick()"  color="cotg-secondary">
+        Create Account
+      </ion-button>
+      <ion-button class="cotg-btn" (click)="handleInviteBtnClick()"  color="cotg-quadratic">
+        Invite Others
+      </ion-button>
+      <ion-button class="cotg-btn" (click)="handleLoginBtnClick()" color="cotg-tertiary">
+        Login
+      </ion-button>
+    </div>
+    <!-- <div class="login-btn-wrapper">
+      <ion-button class="cotg-btn" (click)="handleLoginBtnClick()" color="cotg-tertiary">
+        Login
+      </ion-button>
+    </div> -->
+  </div>
+</ion-content>

@@ -1,0 +1,57 @@
+body{
+    background: #c1e9f5 !important;
+  }
+ion-content {
+    --background: #C1E9F5 !important;
+  }
+  
+
+ion-button.submitbutton {
+    width: 73px;
+    height: 73px;
+}
+ion-button {
+    border: 2px solid white;
+    border-radius: 33px;
+    border-color: white !important;
+}
+ion-button.multibutton {
+    color: black;
+    --background: #c1e9f5;
+}
+span.numberincrement {
+    padding: 0px 18px;
+    font-size: 40px;
+}
+ion-slide {
+    margin-bottom: 30px;
+}
+
+
+ion-button.add-btn {
+    height: 5vh;
+    width: 5vh;
+    border-width: 0px;
+    border-radius: 64%;
+    padding: 0px !important;
+    ion-icon{
+        --background: rgba(100,100,100,0);
+        color: white;
+        font-size: 1.7rem;
+    }
+    
+}
+.swiper-pagination-bullets {
+    bottom: -4px !important;
+    left: 0;
+    width: 100%;
+}
+
+.active {
+    color: black;
+}
+
+.inactive {
+    color: #444;
+    --background: rgba(0,0,0,.01)
+}

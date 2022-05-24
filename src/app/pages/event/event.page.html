@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+
+<ion-content class="ion-text-center">
+<h3>START NEW EVENT</h3>
+
+<div class="slider">
+ 
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+      </ion-slide>
+      <ion-slide>
+        <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+      </ion-slide>
+      <ion-slide>
+        <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+      </ion-slide>
+    </ion-slides>
+ 
+  <p>Theme : {{builderData.theme}}</p>
+</div>
+<br>
+  <h3>Select Mode</h3>
+<ion-button shape="round" [class]="modeClass('single')" (click)="setMode('single')">
+    Single
+</ion-button>
+
+<ion-button shape="round"  [class]="modeClass('multi')" (click)="setMode('multi')">
+    Multi
+</ion-button>
+<br>
+  <h3>Teams</h3>
+<div class="calculation" width-25>
+  <ion-button class="add-btn" color="danger" (click)="decrementQty()" [disabled]="numberTeams===1"><ion-icon name="remove-outline" ></ion-icon></ion-button>
+  <span class="numberincrement">{{numberTeams}}</span>
+  <ion-button class="add-btn"   (click)="incrementQty()"  [disabled]="numberTeams===6"><ion-icon name="add-outline" ></ion-icon></ion-button>
+</div>  
+<br>
+<div class="ion-text-center">
+  <ion-button shape="round" routerLink="/team" class="submitbutton"><ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+</div>
+
+</ion-content>

@@ -1,0 +1,18 @@
+ion-content {
+    --background: #C1E9F5 !important;
+  }
+  ion-item {
+    width: 61%;
+    display: block;
+    margin: 9px auto;
+    border-radius: 31px;
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

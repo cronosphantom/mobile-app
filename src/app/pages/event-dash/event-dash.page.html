@@ -1,0 +1,152 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-text-center">
+    <h3>Planing Phase</h3>
+    <h4>Turn : Team Lorem</h4>
+
+    <img src="assets/icon/new-event-setup/Theme BG.png">
+    <h3>Theme : Humbleness</h3>
+
+    
+    <ion-toolbar class="ion-text-capitalize">  
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+        <ion-segment-button value="0" color="primary">  
+          <ion-label>Activity</ion-label>  
+        </ion-segment-button>  
+        <ion-segment-button value="1" color="primary">  
+          <ion-label>Resources</ion-label>    
+        </ion-segment-button>  
+        <ion-segment-button value="2" color="primary">  
+          <ion-label>Theme</ion-label> 
+        </ion-segment-button>  
+      </ion-segment>  
+    </ion-toolbar>  
+      
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">  
+      <ion-slide class="ion-text-left">
+        <div class="activity">
+         <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          • Etiam nec risus varius, pharetra purus in, faucibus risus. <br>
+          • Maecenas vitae dui id metus sollicitudin scelerisque in id dui. <br>
+          • Aenean a lorem euismod, laoreet dui at, egestas odio. <br>
+          • Fusce vehicula metus in consectetur sagittis. <br>
+          • Curabitur consectetur lacus et neque placerat, commodo rutrum leo convallis. <br>
+          • Pellentesque at diam et metus tincidunt placerat.</p>
+          <ion-item class="comments">
+           
+            <ion-textarea rows="6" cols="20" placeholder="Add additional question and Notes...."></ion-textarea>
+            <div class="ion-text-right">
+              <ion-button shape="round" class="submitbutton">Add</ion-button>
+            </div>
+          </ion-item>
+          <br>
+          <div class="ion-text-center">
+            <ion-button shape="round">Ready</ion-button>
+          </div>
+         
+        </div>
+   
+        
+        
+      </ion-slide>  
+      <ion-slide style="display: block;">
+        <div class="mp3">
+          <div class="ion-text-center">
+            <ion-button shape="round"><ion-icon name="musical-notes-outline"></ion-icon>Mp3</ion-button>
+          </div>
+          <div class="ion-text-right">
+            <a href="#">See All</a>
+          </div>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <br>
+        <br/>
+        <div class="youtube">
+          <div class="ion-text-center">
+            <ion-button shape="round"><ion-icon name="logo-youtube"></ion-icon>  youtube</ion-button>
+          </div>
+          <div class="ion-text-right">
+            <a href="#">See All</a>
+          </div>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <br>
+        <br/>
+        <div class="intenet">
+          <ion-button shape="round"><ion-icon name="globe-outline"></ion-icon> Internet Articles</ion-button>
+          <div class="ion-text-right">
+            <a href="#">See All</a>
+          </div>
+          <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+            <ion-slide>
+              <h1><img src="assets/icon/new-event-setup/Theme BG.png"></h1>
+            </ion-slide>
+          </ion-slides>
+        </div>
+        <div class="last">
+          <ion-input placeholder="Enter Input"></ion-input>
+        </div>
+        <div class="media">
+          <h3>Select Media</h3>
+
+          <ion-button shape="round"><ion-icon name="musical-notes-outline"></ion-icon></ion-button> <ion-button shape="round"><ion-icon name="logo-youtube"></ion-icon></ion-button> <ion-button shape="round"><ion-icon name="globe-outline"></ion-icon></ion-button>
+            <br>
+            <ion-button shape="round" class="upload">Upload</ion-button>
+        </div>
+        <ion-button shape="round">Ready</ion-button>
+      </ion-slide>  
+       
+      <ion-slide class="ion-text-left">
+        <div class="theme">
+          <p>Definition</p>
+          <p>knowing one's own faults,modest,not proud</p><br>
+          <p>Bible References and Story Name :</p>
+          <p>Proverbs 11:2</p><br>
+          <p>Rank in the Kingdom</p>
+          <p>Bible Story</p>
+          <p>Matthew 18:1-6</p>
+          <p>Naaman is Healed 230-234</p>
+        </div>
+        <div class="ion-text-center">
+          <ion-button shape="round" class="themebutton">Ready</ion-button>
+        </div>
+      </ion-slide>  
+    </ion-slides> 
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-center"><b>COTG</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="text-center">New Event</h3>
+  <p class="text-center">Team Names</p>
+  <ion-item *ngFor="let item of [].constructor(eventData.numberTeams); let i = index">
+    <ion-label>Team {{ i+1 }} :</ion-label>
+    <ion-input [(ngModel)]="eventData.teams[i]" placeholder="Enter Team Name"></ion-input>
+  </ion-item>
+ 
+  <div class="text-center ion-margin-top">
+    <ion-button class="text-white" (click)="gotoPage('/c0-activity-cards')" color="danger" >Continue</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,23 @@
+ion-item.item-interactive.item-select.item.md.ion-activatable.ion-focusable.hydrated.item-label {
+    width: 60%;
+    display: block;
+    margin: 9px auto;
+    border-radius: 38px;
+}
+ion-content {
+    --background: #C1E9F5 !important;
+  }
+  ion-item {
+    width: 57%;
+    display: block;
+    margin: 10px auto;
+    border-radius: 30px;
+}
+ion-select {
+    text-align: center !important;
+    width:100%;
+}
+ion-button.submitbutton {
+    width: 73px;
+    height: 73px;
+}

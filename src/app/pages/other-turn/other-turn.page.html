@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-text-center">
+    <h3>Planing Phase</h3>
+    <h4>Turn : Team Lorem</h4>
+
+    <img src="assets/icon/new-event-setup/Theme BG.png">
+    <h3>Theme : Humbleness</h3>
+
+    
+    <ion-toolbar class="ion-text-capitalize">  
+      <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segment" color="primary">  
+        <ion-segment-button value="0" color="primary">  
+          <ion-label>Activity</ion-label>  
+        </ion-segment-button>  
+        <ion-segment-button value="1" color="primary">  
+          <ion-label>Resources</ion-label>    
+        </ion-segment-button>  
+        <ion-segment-button value="2" color="primary">  
+          <ion-label>Theme</ion-label> 
+        </ion-segment-button>  
+      </ion-segment>  
+    </ion-toolbar>  
+      
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">  
+      <ion-slide class="ion-text-left">
+        <div>
+        <h3>Question:1</h3>
+        <br>
+        <h3>Question:2</h3>
+
+        <div class="activity">
+         <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+          • Etiam nec risus varius, pharetra purus in, faucibus risus. <br>
+          • Maecenas vitae dui id metus sollicitudin scelerisque in id dui. <br>
+          • Aenean a lorem euismod, laoreet dui at, egestas odio. <br>
+          • Fusce vehicula metus in consectetur sagittis. <br>
+          • Curabitur consectetur lacus et neque placerat, commodo rutrum leo convallis. <br>
+          • Pellentesque at diam et metus tincidunt placerat.</p>
+        </div>
+        <br>
+        <div class="activity">
+          <p>• Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+           • Etiam nec risus varius, pharetra purus in, faucibus risus. <br>
+           • Maecenas vitae dui id metus sollicitudin scelerisque in id dui. <br>
+           • Aenean a lorem euismod, laoreet dui at, egestas odio. <br>
+           • Fusce vehicula metus in consectetur sagittis. <br>
+           • Curabitur consectetur lacus et neque placerat, commodo rutrum leo convallis. <br>
+           • Pellentesque at diam et metus tincidunt placerat.</p>
+         </div>
+        </div>
+      </ion-slide>   
+    </ion-slides> 
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+    </ion-title>
+    
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="ion-text-center teampage">
+<h3>Name Your Teams</h3>
+               <!-- Team Name start -->
+<br>
+ 
+  
+<ion-item class="ion-text-center"*ngFor="let item of [].constructor(numberTeams); let i = index">
+  <ion-label>Team {{i}}</ion-label> 
+  <ion-input placeholder="Enter Name" (ionChange)="setTeamName(i, $event.target)"></ion-input>
+</ion-item>
+<br>
+
+</ion-content>
+<div class="ion-text-center">
+  <ion-button shape="round" routerLink="/assign" class="submitbutton"><ion-icon name="arrow-forward-outline"></ion-icon></ion-button>
+</div>

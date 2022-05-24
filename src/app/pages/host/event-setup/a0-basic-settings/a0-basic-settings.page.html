@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="text-center"><b>COTG</b></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="text-center">New Event</h3>
+  <ion-item>
+    <ion-label>Theme :</ion-label>
+    <ion-select  [(ngModel)]="eventData.theme" okText="Okay" cancelText="Dismiss">
+      <ion-select-option *ngFor="let theme of themes" [value]="theme">{{ theme.title }}</ion-select-option>
+      
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Mode :</ion-label>
+    <ion-select [(ngModel)]="eventData.mode"  okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="single">Single</ion-select-option>
+      <ion-select-option value="multi">Multi</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label># Teams :</ion-label>
+    <ion-input type="number" [(ngModel)]="eventData.numberTeams"></ion-input>
+  </ion-item>
+  <div class="text-center ion-margin-top">
+    <ion-button (click)="gotoPage('/b0-team-names')" color="danger">Continue</ion-button>
+  </div>
+</ion-content>

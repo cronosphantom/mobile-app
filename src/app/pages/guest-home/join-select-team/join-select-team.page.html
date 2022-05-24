@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <div class="container default-bg">
+ 
+    <div class="title">Join Select Team</div>
+    <div>Enter Name</div>
+    <div>
+      <ion-input text-center></ion-input>
+    </div>
+    <div class="content">
+      <form [formGroup]="joinSelectTeamForm" class="text-center" (ngSubmit)="onFormSubmit(joinSelectTeamForm.value)">
+      <ion-label class="label">Select Team</ion-label>
+      <ion-item lines="none" class="form-field">
+        <ion-select placeholder="Select Team" formControlName="sessionTeam">
+          <ion-select-option value="t1">Team1</ion-select-option>
+          <ion-select-option value="t2">Team2</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button class="submit-btn" type="submit" [disabled]="!joinSelectTeamForm?.valid"> Ready </ion-button>
+      </form>
+    </div>
+  </div>
+
+</ion-content>

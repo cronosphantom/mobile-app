@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <img src="assets/icon/homescreen/logo.png" class="logotop">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container default-bg">
+    <div class="title">
+      Join Session Code
+    </div>
+    <div class="content">
+      <form [formGroup]="joinSessionCodeForm" (ngSubmit)="onFormSubmit(joinSessionCodeForm.value)">
+        <ion-label class="label">Enter Code:</ion-label>
+        <ion-item lines="none" class="form-field">
+          <ion-input class="form-control" type="number" formControlName="sessionCode"></ion-input>
+        </ion-item>
+        <div *ngIf="joinSessionCodeForm.controls.sessionCode.invalid && (joinSessionCodeForm.controls.sessionCode.dirty || joinSessionCodeForm.controls.sessionCode.touched)">
+            <div *ngIf="joinSessionCodeForm.controls.sessionCode.errors?.required">
+              Session Code is required.
+            </div>
+          </div>
+        <!-- <ion-button class="submit-btn" type="submit"> Continue </ion-button> -->
+        
+          <ion-button class="submit-btn" type="submit" [disabled]="!joinSessionCodeForm?.valid"> Continue </ion-button>
+       
+      </form>
+    </div>
+  </div>
+</ion-content>

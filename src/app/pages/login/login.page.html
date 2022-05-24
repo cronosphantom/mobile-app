@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      
+      <img src="assets/icon/homescreen/logo.png" class="logotop">
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="flex">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-item lines="none">
+        <ion-input name="email" type="email" placeholder="Email" ngModel required></ion-input>
+      </ion-item>
+      <ion-item lines="none" class="password-item">
+        <ion-input name="password" [type]="passwordType" placeholder="Password" ngModel required></ion-input>
+        <ion-icon (click)="onPasswordToggle()" [name]="showPassword ? 'eye-off' : 'eye'"></ion-icon>
+      </ion-item>
+      <ion-button class="sign-in-btn" type="submit" [disabled]="form.invalid" expand="block">
+        Sign In
+      </ion-button>
+    </form>
+    <p>If have not registered, Please Register <a routerLink="/register">here</a>.</p>
+  </div>
+</ion-content>
